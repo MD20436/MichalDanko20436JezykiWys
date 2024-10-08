@@ -86,7 +86,7 @@
 						<p>nazwisko:</p>
 					</div>
 					<div class="col-md-4">
-						<p>Dańko</p>
+						<p id="surname">Kowalski</p>
 					</div>
 				</div>
 				<div class="row">
@@ -94,7 +94,7 @@
 						<p>imię:</p>
 					</div>
 					<div class="col-md-4">
-						<p>Michał</p>
+						<p id="name">Jan</p>
 					</div>
 				</div>
 				<div class="row">
@@ -110,7 +110,7 @@
 						<p>email:</p>
 					</div>
 					<div class="col-md-4">
-						<p>20436@student.ans-elblag.pl</p>
+						<p id="email">999@student.ans-elblag.pl</p>
 					</div>
 				</div>
 				<div class="row">
@@ -118,7 +118,7 @@
 						<p>nr indeksu:</p>
 					</div>
 					<div class="col-md-4">
-						<p>20436</p>
+						<p id="index">999</p>
 					</div>
 				</div>
 
@@ -130,52 +130,205 @@
 
 	<section id="projekt1">
 		<div class="container">
-		  <div class="jumbotron">
-			<h1>Projekt 1</h1>
-			<p id="question"></p>
-			<input type="text" id="answer" placeholder="Twoja odpowiedź">
-			<button id="nextButton" onclick="nextQuestion()">Następne pytanie</button>
-			<p id="result"></p>
-		  </div>
+			<div class="jumbotron">
+				<h1>Projekt 1</h1>
+				<h3>Zad1</h3>
+				<form id="myForm0">
+					<label> Wyświetl Tablice</label><br>
+					<input type="button" name="wyswietlTab" id="wyswietlTab" value="Tablica[0]" onclick="wyswietlanie(0)">
+					<br>
+					<label> Modyfikacja ostatni element ( Jest to "Witam" Zamiana na "Nowa wartość" ) </label><br>
+					<input type="button" name="zamiana" id="zamiana" value="tablica[tablica.length-1]" onclick="zmiana()">
+					<br>
+					<label> Dodaj element</label><br>
+					<input type="button" name="dodaj" id="dodaj" value="Dodawanie" onclick="dodajJeden()"><br>
+					<label> Dodaj więcej elementów</label><br>
+					<input type="button" name="dodajW" id="dodajW" value="DodajW" onclick="dodajWiecej()">
+					<p id="wypis"></p>
+				</form>
+				<br>
+				<h3>Zad2</h3>
+				<form id="myForm1">
+					<label> Write </label><br>
+					<input type="button" name="wyswietlWrite" id="wyswietlWrite" value="write" onclick="wyswietl()">
+				</form>
+				<br>
+				<h3>Zad3</h3>
+				<p id="wynik">Tutaj zostanie wyświetlony wynik</p>
+				<h3>Zad 4</h3>
+				<form id="myForm2">
+					<label> Wyświetl połowe tablicy za pomocą While</label><br>
+					<input type="button" name="wyswietlWhile" id="wyswietlWhile" value="While" onclick="wypiszPoloweWhile()"><br>
+				    <label> Wyświetl połowe tablicy za pomocą For</label><br>
+					<input type="button" name="wyswietlFor" id="wyswietlFor" value="For" onclick="wypiszPoloweFor()">
+				</form>
+				<p>Pokaż dane</p>
+				<button onclick="pokazDane()">Pokaż moje dane</button>
+				<script>
+					//Zad 1
+					const POWITANIE = ["Część","Witam"];
+					let p = ["nowy12","nowy13"];
+					let removedItem = p.pop();
+
+					function wyswietlanie(arg1)
+					{
+						alert(POWITANIE[arg1]);
+					}
+
+					function zmiana()
+					{
+						POWITANIE[POWITANIE.length-1] = 'Nowa wartość';
+						wyswietlanie(POWITANIE.length-1);
+					}
+
+					function dodajJeden()
+					{
+						POWITANIE[POWITANIE.length] = 'Nowy element';
+						wyswietlanie(POWITANIE.length-1);
+					}
+
+					function dodajWiecej()
+					{
+						POWITANIE.push('nowy8', 'nowy9', 'nowy10', 'nowy11');
+						POWITANIE.unshift('nowy12', 'nowy13')
+						let v = " "
+						let j = 0;
+						for(j = 0;j<POWITANIE.length;j++)
+						{
+							v += POWITANIE[j] + " , ";
+						}
+						document.getElementById("wypis").innerHTML = v;
+					}
+
+					// Zad 2
+					const IMIONA = ["Ania","Zosia","Michal","Robert"];
+					
+					function wyswietl()
+					{
+						document.write('<p>Pierwszy element to <strong>');
+						document.write(IMIONA[0] + '</strong></p><br>');
+						document.write('<p>Ostatni element to <strong>');
+						document.write(IMIONA[IMIONA.length-1] + '</strong></p>');
+						let p = "nowy";
+						IMIONA.unshift(p);
+						document.write('<p>Pierwszy element to <strong>');
+						document.write(IMIONA[0] + '</strong></p>');
+					}
+
+					// Zad 3
+					const formsCounter = document.querySelectorAll("#projekt1 p").length;
+					document.getElementById("wynik").innerHTML = "Liczba akapitów: " + formsCounter + 
+        			". Policzono akapity z Projekt 1";
+					// Zad 4
+					const dane = ["Imię: Jan", "Nazwisko: Kowalski", "Wiek: 25", "Miasto: Poznań"];
+					const liczby = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+					let i = 0;
+					const mainPage = document.getElementById("myForm2");
+            		const akapit = document.createElement("p");
+					const akapit1 = document.createElement("p");
+					
+					document.getElementById("surname").innerHTML = "Dańko";
+					document.getElementById("name").innerHTML = "Michał";
+					document.getElementById("email").innerHTML = "20436@student.ans-elblag.pl";
+					document.getElementById("index").innerHTML = "20436";
+					
+					function wypiszPoloweWhile() 
+					{
+            			const polowa = Math.floor(liczby.length / 2);
+            			
+						while (i < polowa) 
+						{
+                			akapit.textContent += liczby[i] + " ";
+                			i++;
+            			}
+            			mainPage.appendChild(akapit);
+        			}
+        			
+					function wypiszPoloweFor() 
+					{
+            			const polowa = Math.floor(dane.length / 2);
+            			
+						for ( i = 0; i < polowa; i++) 
+						{
+                			akapit.textContent += dane[i] + " ";
+            			}
+
+            			mainPage.appendChild(akapit1);
+        			}
+					function pokazDane()
+					{
+						const nazwisko = document.getElementById('surname').innerHTML;
+    					const imie = document.getElementById('name').innerHTML;
+    					const email = document.getElementById('email').innerHTML;
+    					const indeks = document.getElementById('index').innerHTML;
+    					const dane = `Nazwisko: ${nazwisko}\nImię: ${imie}\nEmail: ${email}\nNr indeksu: ${indeks}`;
+    					alert(dane);
+					}
+				</script>
+
+			</div>
 		</div>
-	  </section>
-	  
-	  <script>
-		let score = 0;
-		let q = 0;
-	  
-		const questions = [
-		  ['Jaka jest stolica Polski?', 'Warszawa'],
-		  ['Jaki język jest używany w programowaniu webowym?', 'JavaScript'],
-		  ['2 + 2 to?', '4']
-		];
-	  
-		function showQuestion() {
-		  if (q < questions.length) {
-			document.getElementById('question').innerText = questions[q][0];
-		  } else {
-			document.getElementById('question').innerText = 'Koniec quizu!';
-			document.getElementById('result').innerText = 'Liczba punktów: ' + score + ' z ' + questions.length;
-			document.getElementById('answer').style.display = 'none';
-			document.getElementById('nextButton').style.display = 'none'; 
-		  }
-		}
-	  
-		function nextQuestion() {
-		  const userAnswer = document.getElementById('answer').value;
-		  if (userAnswer === questions[q][1]) {
-			score++;
-		  }
-		  q++;
-		  document.getElementById('answer').value = '';
-		  showQuestion();
-		}
-	  
-		
-		showQuestion();
-	  </script>
-	  
-	  
+	</section>
+
+
+	<section id="projekt2">
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Projekt 2</h1>
+			    <div id="quiz">
+				<p id="pytanie"></p>
+				<input type="number" id="odpowiedz" placeholder="Podaj odpowiedź">
+				<button onclick="sprawdzOdpowiedz()">Sprawdź</button>
+			    </div>
+				<script>
+				let pytania = 
+				[
+            		['Ile księżyców ma Ziemia?', 1],
+            		['Ile księżyców ma Saturn?', 62],
+            		['Ile księżyców ma Wenus?', 0]
+        		];
+
+        		let aktualnePytanie = 0;
+        		let wynik = 0;
+
+        		function pokazPytanie() 
+				{
+					if (aktualnePytanie < pytania.length) 
+					{
+                		document.getElementById('pytanie').innerText = pytania[aktualnePytanie][0];
+                		document.getElementById('odpowiedz').value = '';
+            		} else {
+                		pokazWynik();
+            		}
+        		}
+
+        		function sprawdzOdpowiedz() 
+				{
+            		let odpowiedz = parseInt(document.getElementById('odpowiedz').value);
+            		let poprawnaOdpowiedz = pytania[aktualnePytanie][1];
+            		if (odpowiedz === poprawnaOdpowiedz) 
+					{
+                		alert('Prawidłowa odpowiedź!');
+                		wynik++;
+            		} else {
+                		alert('Błąd. Prawidłowa odpowiedź to ' + poprawnaOdpowiedz);
+            		}
+
+            
+            		aktualnePytanie++;
+            		pokazPytanie();
+        		}
+
+        		function pokazWynik() 
+				{
+            		document.getElementById('quiz').innerHTML = '<h2>Twój wynik: ' + wynik + ' z ' + pytania.length + '</h2>';
+        		}
+
+        		window.onload = pokazPytanie;
+				</script>
+			</div>
+		</div>
+	</section>
 
 	<footer>
 		<div class="container" style="margin-top: 5%">
