@@ -1,0 +1,19 @@
+{
+  "name": "20436",
+  "version": "1.0.0",
+  "description": "https://md20436.github.io/MichalDanko20436JezykiWys/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MD20436/MichalDanko20436JezykiWys.git"
+  },
+  "author": "20436",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MD20436/MichalDanko20436JezykiWys/issues"
+  },
+  "homepage": "https://github.com/MD20436/MichalDanko20436JezykiWys#readme"
+}
