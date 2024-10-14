@@ -4,3 +4,5 @@ setTimeout(function(){
  console.log("Upłynęły minimum 3 sek...")
 }, wait);
 console.log("koniec skryptu...");
+
+
