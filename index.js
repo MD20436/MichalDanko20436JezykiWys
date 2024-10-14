@@ -1,32 +1,11 @@
-/*
-const http = require('http');
-const hostname = '127.0.0.1';
-const port = 8888;
-const server = http.createServer(function(request, response) {
- response.statusCode = 200;
- response.setHeader('Content-Type', 'text/plain');
- response.end('Witaj, z serwera node.js !\n');
+const slug = require('slug');
 
-});
-server.listen(port, hostname, () => {
- console.log(`Server running at http://${hostname}:${port}/`);
-});
-*/
-const http = require('http');
-const path = require("path");
-const util = require("util");
-const v8 = require("v8");
-const hostname = '127.0.0.1';
-const port = 8888;
-const server = http.createServer((request, response) => {
- response.statusCode = 200;
- response.setHeader('Content-Type', 'text/plain');
- response.end('Hello, from node.js serwer !\n');
+// Funkcja do wypisywania opisów
+function describe(description, result) {
+    console.log(`${description}: ${result}`);
+}
 
-});
-server.listen(port, hostname, () => {
- util.log(v8.getHeapStatistics());
- console.log(path.basename(__filename));
- util.log(path.join(__dirname, 'uploads','images'));
- console.log(`Server running at http://${hostname}:${port}/`);
-});
+// Użycie funkcji slug
+describe("Slug dla 'I ♥ Unicode'", slug('I ♥ Unicode')); // Oczekiwany wynik: i-love-unicode
+describe("Slug z separatorem '_' dla 'I ♥ Unicode'", slug('I ♥ Unicode', '_')); // Oczekiwany wynik: i_love_unicode
+describe("Slug z małymi literami dla 'Telephone-Number'", slug('Telephone-Number', { lower: true })); // Oczekiwany wynik: telephone-number
