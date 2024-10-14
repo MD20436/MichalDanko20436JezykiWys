@@ -86,7 +86,7 @@
 						<p>nazwisko:</p>
 					</div>
 					<div class="col-md-4">
-						<p>Kowalski</p>
+						<p>Dańko</p>
 					</div>
 				</div>
 				<div class="row">
@@ -94,7 +94,7 @@
 						<p>imię:</p>
 					</div>
 					<div class="col-md-4">
-						<p>Jan</p>
+						<p>Michał</p>
 					</div>
 				</div>
 				<div class="row">
@@ -110,7 +110,7 @@
 						<p>email:</p>
 					</div>
 					<div class="col-md-4">
-						<p>999@student.ans-elblag.pl</p>
+						<p>20436@student.ans-elblag.pl</p>
 					</div>
 				</div>
 				<div class="row">
@@ -118,7 +118,7 @@
 						<p>nr indeksu:</p>
 					</div>
 					<div class="col-md-4">
-						<p>999</p>
+						<p>20436</p>
 					</div>
 				</div>
 
@@ -130,26 +130,52 @@
 
 	<section id="projekt1">
 		<div class="container">
-			<div class="jumbotron">
-				<h1>Projekt 1</h1>
-
-				<p>Miejsce na projekt laboratoryjny</p>
-
-			</div>
+		  <div class="jumbotron">
+			<h1>Projekt 1</h1>
+			<p id="question"></p>
+			<input type="text" id="answer" placeholder="Twoja odpowiedź">
+			<button id="nextButton" onclick="nextQuestion()">Następne pytanie</button>
+			<p id="result"></p>
+		  </div>
 		</div>
-	</section>
-
-
-	<section id="projekt2">
-		<div class="container">
-			<div class="jumbotron">
-				<h1>Projekt 2</h1>
-				
-				<p>Miejsce na projekt laboratoryjny</p>
-				
-			</div>
-		</div>
-	</section>
+	  </section>
+	  
+	  <script>
+		let score = 0;
+		let q = 0;
+	  
+		const questions = [
+		  ['Jaka jest stolica Polski?', 'Warszawa'],
+		  ['Jaki język jest używany w programowaniu webowym?', 'JavaScript'],
+		  ['2 + 2 to?', '4']
+		];
+	  
+		function showQuestion() {
+		  if (q < questions.length) {
+			document.getElementById('question').innerText = questions[q][0];
+		  } else {
+			document.getElementById('question').innerText = 'Koniec quizu!';
+			document.getElementById('result').innerText = 'Liczba punktów: ' + score + ' z ' + questions.length;
+			document.getElementById('answer').style.display = 'none';
+			document.getElementById('nextButton').style.display = 'none'; 
+		  }
+		}
+	  
+		function nextQuestion() {
+		  const userAnswer = document.getElementById('answer').value;
+		  if (userAnswer === questions[q][1]) {
+			score++;
+		  }
+		  q++;
+		  document.getElementById('answer').value = '';
+		  showQuestion();
+		}
+	  
+		
+		showQuestion();
+	  </script>
+	  
+	  
 
 	<footer>
 		<div class="container" style="margin-top: 5%">
