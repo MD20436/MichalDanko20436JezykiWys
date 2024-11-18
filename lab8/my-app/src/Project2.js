@@ -18,7 +18,7 @@ export default function Project2() {
 
   // 3. showImage
   const showImage = () => {
-    setImage('https://via.placeholder.com/150'); // Przykładowy obrazek
+    setImage('/img/Obrazek.jpg');
   };
 
   // 4. loadDataFromJson

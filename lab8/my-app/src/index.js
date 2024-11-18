@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import Project2 from './Project2'; // Dodaj nowy komponent dla Projektu 2
+import Project2 from './Project2';
 
 // Renderowanie Projektu 1
 const root1 = ReactDOM.createRoot(document.getElementById('react-gallery'));
