@@ -18,7 +18,7 @@ export default function Project2() {
 
   // 3. showImage
   const showImage = () => {
-    setImage('/img/Obrazek.jpg');
+    setImage(`${process.env.PUBLIC_URL}/img/Obrazek.jpg`);
   };
 
   // 4. loadDataFromJson
