@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.js": "/MichalDanko20436JezykiWys/static/js/main.84bbde07.js",
+    "main.css": "/MichalDanko20436JezykiWys/static/css/main.e6c13ad2.css",
+    "main.js": "/MichalDanko20436JezykiWys/static/js/main.c2ab1f8d.js",
+    "static/js/453.ed3810f9.chunk.js": "/MichalDanko20436JezykiWys/static/js/453.ed3810f9.chunk.js",
     "index.html": "/MichalDanko20436JezykiWys/index.html",
-    "main.84bbde07.js.map": "/MichalDanko20436JezykiWys/static/js/main.84bbde07.js.map"
+    "main.e6c13ad2.css.map": "/MichalDanko20436JezykiWys/static/css/main.e6c13ad2.css.map",
+    "main.c2ab1f8d.js.map": "/MichalDanko20436JezykiWys/static/js/main.c2ab1f8d.js.map",
+    "453.ed3810f9.chunk.js.map": "/MichalDanko20436JezykiWys/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.84bbde07.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c2ab1f8d.js"
   ]
 }
