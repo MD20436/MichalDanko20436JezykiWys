@@ -17,7 +17,7 @@ export default function GalleryCorrect() {
         <i>{sculpture.name}</i> by {sculpture.artist}
       </h3>
       <p>{sculpture.description}</p>
-      <img src={sculpture.url} alt={sculpture.alt} />
+      <img src={`${process.env.PUBLIC_URL}${sculpture.url}`} alt={sculpture.alt} />
     </div>
   );
 }
