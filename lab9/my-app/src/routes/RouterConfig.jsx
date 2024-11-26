@@ -6,6 +6,7 @@ import AboutMe from '../components/AboutMe';
 import Interests from '../components/Interests';
 import FavoriteFilm from '../components/FavoriteFilm';
 import ContactForm from '../components/ContactForm';
+import NotFound from '../components/NotFound';
 
 const RouterConfig = () => {
   return (
@@ -27,6 +28,8 @@ const RouterConfig = () => {
         <Route path="/interests" element={<Interests />} />
         <Route path="/favorite-film" element={<FavoriteFilm />} />
         <Route path="/contact" element={<ContactForm />} />
+        {}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
