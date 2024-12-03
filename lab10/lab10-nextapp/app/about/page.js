@@ -10,7 +10,7 @@ export default function Page() {
                 WITAM! Jestem Michał.
             </p>
             <img
-                src="/images/me.jpg"
+                src="/MichalDanko20436JezykiWys/images/me.jpg"
                 alt="Moje zdjęcie"
                 style={{ 
                     maxWidth: '200px', 
