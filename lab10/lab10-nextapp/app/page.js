@@ -12,7 +12,7 @@ export default function Home() {
 
         <Image
           className={styles.logo}
-          src="/images/logo.jpg"
+          src="/MichalDanko20436JezykiWys/images/logo.jpg"
           alt="Logo aplikacji"
           width={150}
           height={150}

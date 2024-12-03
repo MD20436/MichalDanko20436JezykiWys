@@ -3,10 +3,10 @@ const nextConfig = {};
 
 export default {
     output: 'export',
-    basePath: '/MichalDanko20436JezykiWys', // Nazwa Twojego repozytorium
-    assetPrefix: '/MichalDanko20436JezykiWys', // Dodaj tę samą nazwę co w basePath
+    basePath: '/MichalDanko20436JezykiWys',
+    assetPrefix: '/MichalDanko20436JezykiWys', 
     images: {
-        unoptimized: true, // Wymagane dla statycznego eksportu obrazów
+        unoptimized: true, 
     },
 };
 
