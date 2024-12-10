@@ -1,8 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/meals": "pages/meals.js",
-  "/meals/share": "pages/meals/share.js",
-  "/community": "pages/community.js"
-}
+{"/_app":"pages/_app.js","/_error":"pages/_error.js","/community":"pages/community.html","/meals":"pages/meals.html","/meals/pizza":"pages/meals/pizza.html","/meals/share":"pages/meals/share.html","/_document":"pages/_document.js","/404":"pages/404.html"}

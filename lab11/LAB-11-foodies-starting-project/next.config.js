@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    basePath: '/<repo-name>',
-    assetPrefix: '/<repo-name>',
-  };
-  
-  module.exports = nextConfig;
-  
+const nextConfig = {};
+
+export default {
+    output: 'export',
+    basePath: '/MichalDanko20436JezykiWys',
+    assetPrefix: '/MichalDanko20436JezykiWys', 
+    images: {
+        unoptimized: true, 
+    },
+};
+
