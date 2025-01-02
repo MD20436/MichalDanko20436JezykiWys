@@ -10,16 +10,33 @@ export default function Home() {
                 Wybierz jedną z poniższych opcji, aby rozpocząć eksplorację:
             </p>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
-                <Link href="/meals">
-                    <a style={{ padding: '1rem 2rem', backgroundColor: '#0070f3', color: 'white', borderRadius: '8px', textDecoration: 'none' }}>
-                        Przeglądaj Jedzenie
-                    </a>
-                </Link>
-                <Link href="/community">
-                    <a style={{ padding: '1rem 2rem', backgroundColor: '#28a745', color: 'white', borderRadius: '8px', textDecoration: 'none' }}>
-                        Społeczność
-                    </a>
-                </Link>
+            <Link
+    href="/meals"
+    style={{
+        display: 'inline-block',
+        padding: '1rem 2rem',
+        backgroundColor: '#0070f3',
+        color: 'white',
+        borderRadius: '8px',
+        textDecoration: 'none',
+    }}
+>
+    Przeglądaj Jedzenie
+</Link>
+<Link
+    href="/community"
+    style={{
+        display: 'inline-block',
+        padding: '1rem 2rem',
+        backgroundColor: '#28a745',
+        color: 'white',
+        borderRadius: '8px',
+        textDecoration: 'none',
+    }}
+>
+    Społeczność
+</Link>
+
             </div>
         </main>
     );

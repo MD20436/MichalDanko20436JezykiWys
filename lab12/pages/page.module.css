@@ -1,0 +1,125 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 75rem;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.header .nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header .nav a {
+  color: #ddd6cb;
+  text-decoration: none;
+}
+
+.header .nav a:hover {
+  color: white;
+}
+
+  
+  .slideshow {
+    width: 40rem;
+    height: 25rem;
+  }
+  
+  .hero {
+    text-align: center;
+    color: #ddd6cb;
+    font-size: 1.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #f9572a, #ffc905);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  
+  .cta {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .cta a {
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, #f9572a, #ff9b05);
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .cta a:hover {
+    background: linear-gradient(90deg, #fc5527, #ffbc50);
+  }
+  .cta a:active {
+    background: linear-gradient(90deg, #fc5527, #ffbc50);
+  }
+  
+  .cta a:first-child {
+    background: transparent;
+    color: #f9572a;
+  }
+  
+  .cta a:first-child:hover {
+    color: #ffc905;
+  }
+  .cta a:first-child:active {
+    background: transparent;
+    color: #f9b241;
+  }
+  
+  .section {
+    color: #ddd6cb;
+    font-size: 1.5rem;
+    max-width: 50rem;
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+    background-color: #2b2b2b;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
