@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[128],{4890:(e,_,n)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/meals/share",function(){return n(7981)}])},7981:(e,_,n)=>{"use strict";n.r(_),n.d(_,{default:()=>s});var r=n(4848);function s(){return(0,r.jsx)("h1",{children:"Share Meals Page"})}}},e=>{var _=_=>e(e.s=_);e.O(0,[636,593,792],()=>_(4890)),_N_E=e.O()}]);
