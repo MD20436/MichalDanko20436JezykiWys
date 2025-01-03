@@ -77,4 +77,28 @@
   .meal p {
     color: #ddd6cb;
   }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .grid > li {
+    background: #1b1b1b;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #ddd6cb;
+  }
+  
+  .grid > li h2 {
+    color: #ffc905;
+    margin: 0.5rem 0;
+  }
+  
+  .grid > li p {
+    color: #ddd6cb;
+  }
   

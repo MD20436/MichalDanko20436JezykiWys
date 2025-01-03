@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './page.module.css';
+import styles from './page2.module.css';
 
 const communityImages = [
   { image: '/images/icon.png', alt: 'Community Icon' },
