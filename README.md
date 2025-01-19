@@ -1,1 +1,1 @@
-https://md20436.github.io/MichalDanko20436JezykiWys/
+https://michal-danko20436-jezyki-wys.vercel.app/
